@@ -10,7 +10,7 @@ class ServerThread(socket: Socket) extends Thread("ServerThread") {
       val out = new ObjectOutputStream(new DataOutputStream(socket.getOutputStream))
       val in = new ObjectInputStream(new DataInputStream(socket.getInputStream()));
 
-      val data: Array[String] = Array("One", "Two")
+      val data= Array("One", "Two","Three")
       out.writeObject(data)
       out.close();
       in.close();
