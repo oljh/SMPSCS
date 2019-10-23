@@ -18,7 +18,7 @@ object Сlient {
 
       // out.writeObject(filter)
       // out.flush()
-      val arr: Array[Any] = in.readObject().asInstanceOf[Array[Any]]
+      val arr: List[Any] = in.readObject().asInstanceOf[List[Any]]
       arr.foreach(f => println(f))
 
       out.close()
